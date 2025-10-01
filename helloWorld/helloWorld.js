@@ -14,7 +14,7 @@ export default class HelloWorld extends LightningElement {
         age : 30
     }
 
-    //two way data minding
+    //two way data binding
     title = 'Aura'
     name = 'Salesforce troops'
 
