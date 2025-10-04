@@ -47,7 +47,7 @@ export default class NavigationsPart2 extends NavigationMixin (LightningElement)
             attributes:{
                 url : '/one/one.app#' + btoa(JSON.stringify(defination))
              }
-                })
+        })
      
     }   
 
