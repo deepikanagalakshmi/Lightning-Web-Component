@@ -1,0 +1,75 @@
+<template>
+
+    <lightning-card title = 'Create Record Using lightning-record-form'>
+        <div class = 'slds-m-around_medium'>
+
+        <lightning-record-form
+            object-api-name = {objectName}
+            fields = {fieldList}
+            onsuccess = {handleSuccess}
+        >
+        </lightning-record-form>
+
+        </div>
+    </lightning-card>
+
+    <lightning-card title = 'Display Record Using lightning-record-form'>
+        <div class = 'slds-m-around_medium'>
+
+        <lightning-record-form
+            record-id="001JX00000sv4OkYAI"
+            object-api-name = {objectName}
+            fields = {fieldList}
+        >
+        <!-- by default view moad(can edit) -->
+        </lightning-record-form>
+
+        </div>
+    </lightning-card>
+
+     <lightning-card title = 'Display Record Using lightning-record-form READ-ONLY'>
+        <div class = 'slds-m-around_medium'>
+
+        <lightning-record-form
+            record-id="001JX00000sv4OkYAI"
+            object-api-name = {objectName}
+            fields = {fieldList}
+            mode = 'readOnly'
+        >
+        </lightning-record-form>
+
+        </div>
+    </lightning-card>
+
+     <lightning-card title = 'Edit Record Using lightning-record-form'>
+        <div class = 'slds-m-around_medium'>
+
+        <lightning-record-form
+            record-id="001JX00000sv4OkYAI"
+            object-api-name = {objectName}
+            fields = {fieldList}
+            mode = 'edit'
+            columns="2"
+        >
+        </lightning-record-form>
+
+        </div>
+    </lightning-card>
+
+     <!-- in record page -->
+     <lightning-card title = 'Edit Record with layout Using lightning-record-form'>
+        <div class = 'slds-m-around_medium'>
+
+        <lightning-record-form
+            record-id={recordId}
+            object-api-name = {objectApiName}
+            mode = 'edit'
+            columns="2"
+            layout-type="Compact"
+            >
+        </lightning-record-form>
+
+        </div>
+    </lightning-card>
+    
+</template>

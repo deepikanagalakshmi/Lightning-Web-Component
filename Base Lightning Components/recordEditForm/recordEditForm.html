@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Lightning Record Edit Form">
+        <div class="slds-m-around_medium">
+            <lightning-record-edit-form class="slds-m-around_medium" record-id={recordID} object-api-name={objectName}>
+                <lightning-messages></lightning-messages> <!-- for validation -->
+
+                <lightning-input-field field-name={fieldList.accountField}></lightning-input-field>
+                <lightning-input-field field-name={fieldList.nameField}></lightning-input-field>
+                <lightning-input-field field-name={fieldList.phoneField}></lightning-input-field>
+                <lightning-input-field field-name={fieldList.titleField}></lightning-input-field>
+
+                <!-- Email field with custom label and label-hidden -->
+                <label class="slds-form-element__label custom-label">Custom Email Label</label>
+                <lightning-input-field field-name={fieldList.emailField} variant="label-hidden"></lightning-input-field>
+
+                <!-- Action buttons -->
+                <lightning-button class="slds-m-around_medium" label="Reset" onclick={handleReset}></lightning-button>
+                <lightning-button class="slds-m-around_medium" variant="brand" type="submit" label="Save"></lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>
