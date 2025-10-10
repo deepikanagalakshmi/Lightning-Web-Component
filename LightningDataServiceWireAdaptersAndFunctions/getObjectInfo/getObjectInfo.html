@@ -1,0 +1,25 @@
+<template>
+
+    <!-- Card for getObjectInfo -->
+    <lightning-card title="getObjectInfo" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <div>Default Record Type ID: {defaultRecordTypeId}</div>
+            <div>Child Relationship: {firstChildObjectName}</div>
+        </div>
+    </lightning-card>
+
+    <!-- Card for getObjectInfos -->
+    <lightning-card title="getObjectInfos" icon-name="standard:opportunity">
+        <div class="slds-m-around_medium">
+            <template if:true={objectApiInfosResponse}>
+                <template for:each={objectApiInfosResponse.results} for:item="object">
+                    <div key={object.result.apiName} class="slds-m-vertical_small">
+                        <div>Object API Name: {object.result.apiName}</div>
+                        <div>Default Record Type ID: {object.result.defaultRecordTypeId}</div>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+
+</template>
